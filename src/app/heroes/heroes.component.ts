@@ -23,11 +23,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes()
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.addMessage(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
-
   // with this approach the Observable awaits to emit the array of heroes, which could happen now or
   // several minutes from now. The subscribe() method passes the emitted array to the callback, which sets the component's heroes property.
   getHeroes(): void {
